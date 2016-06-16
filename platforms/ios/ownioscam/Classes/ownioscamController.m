@@ -61,7 +61,7 @@
        CGFloat scale = screenBounds.height / camViewHeight;
 //        
        self.picker.cameraViewTransform = CGAffineTransformMakeTranslation(0, (screenBounds.height - camViewHeight) / 2.0);
-       self.picker.cameraViewTransform = CGAffineTransformScale(self.picker.cameraViewTransform, scale, scale);
+       self.picker.cameraViewTransform = CGAffineTransformScale(self.picker.cameraViewTransform, screenBounds.width, scale);
         [Toolbarproperty setItems:[[NSArray alloc]initWithObjects:Flashproperty,AutoProperty,nil,nil, nil]];
    self.picker.cameraOverlayView = self.view;
     //    CGSize screenSize = [[UIScreen mainScreen] bounds].size;
