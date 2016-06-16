@@ -52,16 +52,16 @@
 //       [self.view addGestureRecognizer:pinchRec];        // Set this VC's view as the overlay view for the UIImagePickerController
 //     
 //        
-//        CGSize screenBounds = [UIScreen mainScreen].bounds.size;
+      CGSize screenBounds = [UIScreen mainScreen].bounds.size;
 //        
-//        CGFloat cameraAspectRatio = 4.0f/3.0f;
+       CGFloat cameraAspectRatio = 4.0f/3.0f;
 //        
-//        CGFloat camViewHeight = screenBounds.width * cameraAspectRatio;
-//        CGFloat scale = screenBounds.height / camViewHeight;
+      CGFloat camViewHeight = screenBounds.width * cameraAspectRatio;
+       CGFloat scale = screenBounds.height / camViewHeight;
 //        
-//        self.picker.cameraViewTransform = CGAffineTransformMakeTranslation(0, (screenBounds.height - camViewHeight) / 2.0);
-//        self.picker.cameraViewTransform = CGAffineTransformScale(self.picker.cameraViewTransform, scale, scale);
-//        [Toolbarproperty setItems:[[NSArray alloc]initWithObjects:Flashproperty,AutoProperty,nil,nil, nil]];
+       self.picker.cameraViewTransform = CGAffineTransformMakeTranslation(0, (screenBounds.height - camViewHeight) / 2.0);
+       self.picker.cameraViewTransform = CGAffineTransformScale(self.picker.cameraViewTransform, scale, scale);
+        [Toolbarproperty setItems:[[NSArray alloc]initWithObjects:Flashproperty,AutoProperty,nil,nil, nil]];
    self.picker.cameraOverlayView = self.view;
       //  CGSize screenSize = [[UIScreen mainScreen] bounds].size;
         //float cameraAspectRatio = 4.0 / 3.0;
