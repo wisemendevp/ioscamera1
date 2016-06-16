@@ -40,11 +40,11 @@
         self.picker.cameraFlashMode = UIImagePickerControllerCameraFlashModeAuto;
      
         self.picker.delegate = self;
-            CGRect screenFrame = [[UIScreen mainScreen] bounds];
+          //  CGRect screenFrame = [[UIScreen mainScreen] bounds];
         
-        self.view.frame = screenFrame;
+     //   self.view.frame = screenFrame;
       // self.view.window.frame = screenFrame;
-       self.picker.view.frame = screenFrame;
+    //   self.picker.view.frame = screenFrame;
     
       
 //        self.view.userInteractionEnabled = YES;
