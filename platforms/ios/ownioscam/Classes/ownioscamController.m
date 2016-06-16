@@ -52,24 +52,24 @@
 //       [self.view addGestureRecognizer:pinchRec];        // Set this VC's view as the overlay view for the UIImagePickerController
 //     
 //        
-      CGSize screenBounds = [UIScreen mainScreen].bounds.size;
+    //  CGSize screenBounds = [UIScreen mainScreen].bounds.size;
 //        
-       CGFloat cameraAspectRatio = 4.0f/3.0f;
+     //  CGFloat cameraAspectRatio = 4.0f/3.0f;
 //        
-      CGFloat camViewHeight = screenBounds.width * cameraAspectRatio;
-       CGFloat scale = screenBounds.height / camViewHeight;
+    //  CGFloat camViewHeight = screenBounds.width * cameraAspectRatio;
+     //  CGFloat scale = screenBounds.height / camViewHeight;
 //        
-       self.picker.cameraViewTransform = CGAffineTransformMakeTranslation(0, (screenBounds.height - camViewHeight) / 2.0);
-       self.picker.cameraViewTransform = CGAffineTransformScale(self.picker.cameraViewTransform, scale, scale);
+     //  self.picker.cameraViewTransform = CGAffineTransformMakeTranslation(0, (screenBounds.height - camViewHeight) / 2.0);
+      // self.picker.cameraViewTransform = CGAffineTransformScale(self.picker.cameraViewTransform, scale, scale);
         [Toolbarproperty setItems:[[NSArray alloc]initWithObjects:Flashproperty,AutoProperty,nil,nil, nil]];
    self.picker.cameraOverlayView = self.view;
-      //  CGSize screenSize = [[UIScreen mainScreen] bounds].size;
-        //float cameraAspectRatio = 4.0 / 3.0;
-      //  float imageWidth = floorf(screenSize.width * cameraAspectRatio);
-      //  float scale = ceilf((screenSize.height / imageWidth) * 10.0) / 10.0;
-      //  self.picker.cameraViewTransform = CGAffineTransformMakeScale(scale, scale);
+        CGSize screenSize = [[UIScreen mainScreen] bounds].size;
+        float cameraAspectRatio = 4.0 / 3.0;
+        float imageWidth = floorf(screenSize.width * cameraAspectRatio);
+        float scale = ceilf((screenSize.height / imageWidth) * 10.0) / 10.0;
+        self.picker.cameraViewTransform = CGAffineTransformMakeScale(scale, scale);
     self.picker.cameraOverlayView.backgroundColor=[UIColor clearColor];
-          _lastScale = 1.;
+       //   _lastScale = 1.;
     }
     return self;
 }
